@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module vista</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>vista</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/elias/Documents/sobrePython/Intermedio/proyecto2/vista.py">/home/elias/Documents/sobrePython/Intermedio/proyecto2/vista.py</a></font></td></tr></table>
+    <p><tt>#####################################################################<br>
+#&nbsp;VISTA.PY&nbsp;--------------------------------------------------------<br>
+#&nbsp;Contiene&nbsp;la&nbsp;clase&nbsp;LibroSocioVista&nbsp;<br>
+#####################################################################</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="tkinter.messagebox.html">tkinter.messagebox</a><br>
+</td><td width="25%" valign=top><a href="mysql.html">mysql</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="vista.html#LibroSociosVista">LibroSociosVista</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LibroSociosVista">class <strong>LibroSociosVista</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;que&nbsp;controla&nbsp;aspectos&nbsp;y&nbsp;define&nbsp;metodos&nbsp;<br>
+para&nbsp;nuestra&nbsp;aplicacion,&nbsp;un&nbsp;libro&nbsp;de&nbsp;socios<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LibroSociosVista-__del__"><strong>__del__</strong></a>(self)</dt><dd><tt>Destructor,&nbsp;cerramos&nbsp;tambien&nbsp;la&nbsp;conexion&nbsp;con&nbsp;la&nbsp;DB</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-__init__"><strong>__init__</strong></a>(self, window)</dt><dd><tt>Constructor&nbsp;de&nbsp;la&nbsp;clase&nbsp;<a href="#LibroSociosVista">LibroSociosVista</a><br>
+&nbsp;<br>
+En&nbsp;caso&nbsp;de&nbsp;que&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;no&nbsp;contenga&nbsp;socios&nbsp;o&nbsp;sea<br>
+inicializada,&nbsp;se&nbsp;pregunta&nbsp;al&nbsp;usuario&nbsp;si&nbsp;desea&nbsp;tener&nbsp;una&nbsp;<br>
+precarga&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;con&nbsp;socios&nbsp;prefijados<br>
+&nbsp;<br>
+Se&nbsp;definen&nbsp;eventos&nbsp;asociados&nbsp;a&nbsp;cada&nbsp;entry&nbsp;para&nbsp;borrar<br>
+los&nbsp;places&nbsp;holders</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-activar_resultados"><strong>activar_resultados</strong></a>(self)</dt><dd><tt>Habiendo&nbsp;coincidencia&nbsp;con&nbsp;lo&nbsp;consultado&nbsp;se&nbsp;habilitan<br>
+botones&nbsp;para&nbsp;desplazarse&nbsp;a&nbsp;traves&nbsp;de&nbsp;los&nbsp;resultados<br>
+y&nbsp;se&nbsp;realiza&nbsp;la&nbsp;primera&nbsp;carga&nbsp;de&nbsp;los&nbsp;socios&nbsp;consultados</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-borrar_entrys"><strong>borrar_entrys</strong></a>(self)</dt><dd><tt>Despues&nbsp;de&nbsp;haber&nbsp;realizado&nbsp;alguna&nbsp;operación&nbsp;que&nbsp;nos&nbsp;modifique<br>
+,&nbsp;es&nbsp;decir(Alta,&nbsp;Baja,&nbsp;Modificacion)&nbsp;los&nbsp;datos&nbsp;de&nbsp;algun&nbsp;socio<br>
+limpiamos&nbsp;todos&nbsp;los&nbsp;entries.</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-cerrar_socio"><strong>cerrar_socio</strong></a>(self)</dt><dd><tt>Cierra&nbsp;la&nbsp;conexion&nbsp;con&nbsp;la&nbsp;base&nbsp;de&nbsp;datos</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry0"><strong>clear_entry0</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry1"><strong>clear_entry1</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry2"><strong>clear_entry2</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry3"><strong>clear_entry3</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry4"><strong>clear_entry4</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry5"><strong>clear_entry5</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry6"><strong>clear_entry6</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry7"><strong>clear_entry7</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-clear_entry8"><strong>clear_entry8</strong></a>(self, var_)</dt><dd><tt>borra&nbsp;el&nbsp;placeholder&nbsp;puesto&nbsp;a&nbsp;modo&nbsp;de&nbsp;<br>
+ejemplo&nbsp;para&nbsp;el&nbsp;respectivo&nbsp;entry</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-mostrar_resultados"><strong>mostrar_resultados</strong></a>(self)</dt><dd><tt>Cada&nbsp;vez&nbsp;que&nbsp;el&nbsp;valor&nbsp;del&nbsp;spinbox&nbsp;es&nbsp;modificado<br>
+se&nbsp;llama&nbsp;a&nbsp;este&nbsp;metodo&nbsp;para&nbsp;actualizar&nbsp;los&nbsp;valores<br>
+de&nbsp;los&nbsp;entrys&nbsp;en&nbsp;funcion&nbsp;de&nbsp;los&nbsp;resultados&nbsp;de&nbsp;la&nbsp;<br>
+busqueda</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-para_alta"><strong>para_alta</strong></a>(self)</dt><dd><tt>Se&nbsp;guarda&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;al&nbsp;nuevo&nbsp;socio.<br>
+&nbsp;<br>
+Se&nbsp;verifica&nbsp;que&nbsp;tengamos&nbsp;conexion&nbsp;con&nbsp;la&nbsp;base&nbsp;de&nbsp;datos,<br>
+entonces&nbsp;chequeamos&nbsp;que&nbsp;los&nbsp;datos&nbsp;sean&nbsp;los&nbsp;esperados&nbsp;<br>
+verificando&nbsp;por&nbsp;medio&nbsp;del&nbsp;metodo&nbsp;<a href="#LibroSociosVista-regex_entries">regex_entries</a>().&nbsp;<br>
+Indicamos&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;la&nbsp;operacion&nbsp;de&nbsp;alta&nbsp;y<br>
+los&nbsp;datos&nbsp;del&nbsp;socio;&nbsp;por&nbsp;último&nbsp;se&nbsp;des/habilitan<br>
+botones&nbsp;correspondientes.</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-para_baja"><strong>para_baja</strong></a>(self)</dt><dd><tt>Elimina&nbsp;el&nbsp;socio&nbsp;seleccionado.<br>
+&nbsp;<br>
+Habiendo&nbsp;realizado&nbsp;una&nbsp;busqueda&nbsp;y&nbsp;seleccionado&nbsp;el&nbsp;socio&nbsp;de&nbsp;<br>
+interes&nbsp;lo&nbsp;borra.&nbsp;Tomando&nbsp;el&nbsp;numero&nbsp;de&nbsp;socio&nbsp;se&nbsp;chequea&nbsp;la<br>
+conexion&nbsp;con&nbsp;DB,&nbsp;se&nbsp;envia&nbsp;la&nbsp;orden&nbsp;de&nbsp;borrado&nbsp;y&nbsp;deshabilitan<br>
+botones&nbsp;de&nbsp;correspondientes.&nbsp;Se&nbsp;exhibe&nbsp;mensaje&nbsp;de&nbsp;borrado&nbsp;<br>
+exitoso</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-para_consulta"><strong>para_consulta</strong></a>(self)</dt><dd><tt>Se&nbsp;busca&nbsp;coincidencias&nbsp;en&nbsp;funcion&nbsp;de&nbsp;la&nbsp;categoria&nbsp;y&nbsp;<br>
+parametro&nbsp;para&nbsp;realizar&nbsp;la&nbsp;busqueda&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;de&nbsp;los<br>
+socios<br>
+&nbsp;<br>
+Se&nbsp;chequea&nbsp;que&nbsp;la&nbsp;categoria&nbsp;haya&nbsp;sido&nbsp;seleccionada<br>
+y&nbsp;en&nbsp;funcion&nbsp;de&nbsp;categoria&nbsp;y&nbsp;strings&nbsp;de&nbsp;busqueda&nbsp;se&nbsp;realiza<br>
+la&nbsp;consulta&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos,&nbsp;previamente&nbsp;verificando&nbsp;conexion<br>
+&nbsp;<br>
+En&nbsp;caso&nbsp;de&nbsp;haber&nbsp;coincidencias&nbsp;se&nbsp;llama&nbsp;al&nbsp;metodo<br>
+<a href="#LibroSociosVista-activar_resultados">activar_resultados</a>()</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-para_modificar"><strong>para_modificar</strong></a>(self)</dt><dd><tt>En&nbsp;base&nbsp;a&nbsp;una&nbsp;consulta&nbsp;se&nbsp;modifica&nbsp;el&nbsp;socio&nbsp;seleccionado<br>
+&nbsp;<br>
+Se&nbsp;chequea&nbsp;la&nbsp;conexion&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos,&nbsp;y&nbsp;se&nbsp;habilita&nbsp;el<br>
+el&nbsp;entry&nbsp;numero&nbsp;de&nbsp;socio&nbsp;asi&nbsp;es&nbsp;seleccionable.&nbsp;Se&nbsp;chequean&nbsp;los<br>
+entrys&nbsp;por&nbsp;medio&nbsp;de&nbsp;<a href="#LibroSociosVista-regex_entries">regex_entries</a>()&nbsp;y&nbsp;se&nbsp;indica&nbsp;el&nbsp;nuevo&nbsp;cambio<br>
+a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;indicando&nbsp;en&nbsp;caso&nbsp;exito&nbsp;un&nbsp;mensaje&nbsp;al&nbsp;usuario.<br>
+A&nbsp;continuación&nbsp;se&nbsp;borran&nbsp;los&nbsp;entries</tt></dd></dl>
+
+<dl><dt><a name="LibroSociosVista-regex_entries"><strong>regex_entries</strong></a>(self)</dt><dd><tt>Controlamos&nbsp;que&nbsp;antes&nbsp;hacer&nbsp;una&nbsp;ALTA&nbsp;o&nbsp;MODIFICAR&nbsp;los&nbsp;<br>
+datos&nbsp;ingresados&nbsp;en&nbsp;los&nbsp;distintos&nbsp;entries&nbsp;sean&nbsp;coherentes<br>
+con&nbsp;el&nbsp;dato&nbsp;esperado</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DISABLED</strong> = 'disabled'<br>
+<strong>FALSE</strong> = 0<br>
+<strong>INSERT</strong> = 'insert'<br>
+<strong>NORMAL</strong> = 'normal'<br>
+<strong>TRUE</strong> = 1<br>
+<strong>cant_entries</strong> = 9<br>
+<strong>items_labels</strong> = ['Numero de Socio', 'Nombre', 'Apellido', 'DNI', 'Domicilio', 'Localidad', 'Nacionalidad', 'Fecha de Nacimiento', 'Meses Impagos']<br>
+<strong>placeholder_consulta_entry</strong> = 'Ingrese aqui su busqueda'<br>
+<strong>placeholder_consulta_label</strong> = ['<font color="#c040c0">\n\n</font>No se han realizado consultas<font color="#c040c0">\n\n</font>', 'Se han encontrado', 'coincidencias', '<font color="#c040c0">\n\n</font>No se han encontrado coincidencias<font color="#c040c0">\n\n</font>', '<font color="#c040c0">\n\n</font>No se ha seleccionado categoria<font color="#c040c0">\n\n</font>', '<font color="#c040c0">\n\n</font>Cambios realizados exitosamente!<font color="#c040c0">\n\n</font>']<br>
+<strong>placeholders_labels_socio</strong> = ['123456', 'Elias', 'Gracia', '12345678', 'Calle 123', 'Lomas de Zamora', 'Argentino', '2000-01-24', 'Abril2018,Junio2019']<br>
+<strong>string_alta_socio</strong> = 'INSERT INTO Tabla_Socios (<font color="#c040c0">\n</font>    nombre, apellido,...os) <font color="#c040c0">\n</font>    VALUES ( %s, %s, %s, %s, %s, %s, %s, %s)'<br>
+<strong>string_baja_socio</strong> = 'DELETE FROM Tabla_Socios WHERE socio=%s'<br>
+<strong>string_busqueda_sql</strong> = ['socio', 'nombre', 'apellido', 'dni', 'domicilio', 'localidad', 'nacionalidad', 'fnacimiento', 'meses_impagos']<br>
+<strong>string_consultar_todos</strong> = 'SELECT * FROM Tabla_Socios'<br>
+<strong>string_db</strong> = 'CREATE DATABASE IF NOT EXISTS Club_Python'<br>
+<strong>string_modif_socio</strong> = 'UPDATE Tabla_Socios SET nombre=%s, apellido=%s,<font color="#c040c0">\n</font>...acimiento=%s, meses_impagos=%s<font color="#c040c0">\n</font>    WHERE socio=%s'<br>
+<strong>string_patron</strong> = [r'^\d{1,5}$', '^[a-zA-Z]+$', '^[a-zA-Z]+$', '([1-9][0-9]{6}$|[1-5][0-9]{7}$)', r'(^[a-zA-Z]+\s([a-zA-Z]+\s)?([a-zA-Z]+\s)?([a-zA-Z]+\s)?)\d{1,6}\Z', r'(^(\d{1,2}) [a-zA-Z]+ ([a-zA-Z]+)?|(^[a-zA-Z]+$)...zA-Z]+\s)?([a-zA-Z]+)\Z)|^[a-zA-Z]+ (\d{1,6})?\Z)', '^[a-zA-Z]{2,15}$', '(1|2)[0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])']<br>
+<strong>string_socio</strong> = 'INSERT INTO Tabla_Socios (<font color="#c040c0">\n</font>    socio, nombre, ap... <font color="#c040c0">\n</font>    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)'<br>
+<strong>string_sql_socio1</strong> = ['123456', 'Elias', 'Gracia', '10456789', 'Pasteur 260', 'Lomas de Zamora', 'Argentino', '1999-01-20', 'Debe todo el 2019']<br>
+<strong>string_sql_socio2</strong> = ['123457', 'Juan', 'Garcia', '20459876', 'Plank 170', 'Cleypole', 'Paraguayo', '1990-02-24', 'Abril2018']<br>
+<strong>string_sql_socio3</strong> = ['123458', 'Alejandra', 'Perez', '39056789', 'Einsten 100', 'Lanus', 'Uruguaya', '1980-03-14', 'Junio2019']<br>
+<strong>string_sql_socio4</strong> = ['123459', 'Cecilia', 'Ortega', '92056789', 'Milsten 998', 'Avellaneda', 'Brasilera', '2010-04-04', 'No adeuda']<br>
+<strong>string_tabla</strong> = 'CREATE TABLE IF NOT EXISTS Tabla_Socios( <font color="#c040c0">\n</font>    so...   fnacimiento DATE, <font color="#c040c0">\n</font>    meses_impagos CHAR(40))'<br>
+<strong>string_tabla_vacia</strong> = 'SELECT * from Tabla_Socios limit 1'<br>
+<strong>string_usar_db</strong> = 'USE Club_Python'</td></tr></table>
+</body></html>
